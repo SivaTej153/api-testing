@@ -18,8 +18,7 @@ public class ApiTests {
                         then().
                             assertThat().
                                 statusCode(200);
-//        response.log().body();
-//        response.log().all();
+        response.log().body();
     }
 
     @Test
@@ -124,6 +123,7 @@ public class ApiTests {
                 body("records.category_id", everyItem(notNullValue())).
                 body("records.id[0]", equalTo("1008"));
 
+        response.log().body();
     }
 
     @Test
